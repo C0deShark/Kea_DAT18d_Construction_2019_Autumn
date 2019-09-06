@@ -1,0 +1,10 @@
+to move into a folder
+cd [folder name]
+
+to move one folder up
+cd ..
+
+mv [what] [where to]
+
+to get repo into your local file system
+git clone [URL]
