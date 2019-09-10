@@ -1,4 +1,6 @@
 public interface SoundGenerator {
 
-    public String sound();
+    default public String sound() {
+        return "bbbbzzzzzzz";
+    };
 }

@@ -3,7 +3,17 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class Cow implements SoundGenerator {
+public class Cow extends Animal implements SoundGenerator {
+
+    @Override
+    public String eat(String[] food) {
+        return "Cow dung";
+    }
+
+    public String sound(String toSay) {
+        return toSay;
+    }
+
     @Override
     public String sound() {
         String[] moos = new String[5];
