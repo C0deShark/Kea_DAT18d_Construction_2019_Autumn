@@ -16,5 +16,6 @@ public class Main {
 
         String foundType = TypeChecker.checkType(new Float(68.2));
         System.out.println(foundType);
+
     }
 }
