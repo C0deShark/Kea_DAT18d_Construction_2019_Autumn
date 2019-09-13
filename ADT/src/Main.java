@@ -7,13 +7,14 @@ public class Main {
 //        Drawer stringDrawer = new Drawer("XP");
 //        System.out.println(stringDrawer.getType());
 
-        Drawer usefulDrawer = new Drawer();
+//        Drawer usefulDrawer = new Drawer();
+//
+//        usefulDrawer.setType(new Integer(42));
+//        System.out.println(usefulDrawer.getType() instanceof Integer);
+//        usefulDrawer.setType("oh yeah");
+//        System.out.println(usefulDrawer.getType() instanceof String);
 
-        usefulDrawer.setType(new Integer(42));
-        System.out.println(usefulDrawer.getType() instanceof Integer);
-        usefulDrawer.setType("oh yeah");
-        System.out.println(usefulDrawer.getType() instanceof String);
-
-
+        String foundType = TypeChecker.checkType(new Float(68.2));
+        System.out.println(foundType);
     }
 }
