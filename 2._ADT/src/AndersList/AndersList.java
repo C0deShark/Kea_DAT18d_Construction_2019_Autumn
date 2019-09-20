@@ -23,9 +23,21 @@ public class AndersList<T> extends AbstractAndersList {
 
     @Override
     public void remove(int index) {
-        // todo
         // delete the element in the index
         // index can't be empty so everything proceeding should be moved one index to the left.
+        if (index >= list.length) {
+            System.out.println("Index out of bounds");
+        } else {
+            T[] newList = (T[]) new Object[list.length-1];
+            for (int i = 0; i < list.length; i++) {
+                if (i < index) {
+                    newList[i] = list[i];
+                } else if (i > index) {
+                    newList[i-1] = list[i];
+                }
+            }
+            list = newList;
+        }
     }
 
     @Override

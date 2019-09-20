@@ -26,7 +26,8 @@ public class Main {
         list.add(new Integer(1));
         list.add(new Integer(5));
         list.add(new Integer(2));
-        list.set(0, new Integer(100));
+        System.out.println(list);
+        list.remove(2);
         System.out.println(list);
 
     }
