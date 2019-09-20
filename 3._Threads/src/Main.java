@@ -21,7 +21,7 @@ public class Main {
         ThreadExtendsThread extendsThread = new ThreadExtendsThread();
         ThreadExtendsThread extendsThreadTwo = new ThreadExtendsThread();
         // start the thread
-        extendsThread.start();
+        // extendsThread.start();
         //extendsThreadTwo.start();
 
         // grouping threads together
@@ -32,7 +32,8 @@ public class Main {
         Thread thread = new Thread(threadGroup, runnableThread);
         thread.start();
 
-        System.out.println(thread.getThreadGroup().getName());
+        // System.out.println(thread.getThreadGroup().getName());
+
 
 
     }
