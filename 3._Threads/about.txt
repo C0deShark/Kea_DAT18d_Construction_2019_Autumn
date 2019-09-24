@@ -57,7 +57,6 @@ Livelock: thread 1 waits for thread 2 to respond, thread 2 waits for thread 1 to
 Mutual Exclusive: other threads can't interfere with the data
 Critical section:
 Race Conditions:
-Critical Sections:
 Thread safety:
 Multiprocessing vs multithreading vs multitasking:
 Intrinsic lock (monitor lock):
