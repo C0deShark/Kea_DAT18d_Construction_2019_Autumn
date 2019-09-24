@@ -36,3 +36,29 @@ Multitasking
 
 --------------------------------------------------
 --------------------------------------------------
+
+https://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html
+
+Synchronization: 2 types of problems: thread interference and memory consistency errors
+
+- The tool needed to prevent these errors is synchronization.
+- Thread contention, which occurs when two or more threads try to access the same resource simultaneously
+    - Deadlock, Starvation and livelock are forms of thread contention.
+
+Deadlock: blocked forever
+Starvation: not blocked but 1 thread has the majority of the access
+Livelock: thread 1 waits for thread 2 to respond, thread 2 waits for thread 1 to respond, they are busy responding to each other
+            - Example: 2 people walking down a street and sidestepping each other
+
+
+--------------------------------------------------
+--------------------------------------------------
+
+Mutual Exclusive: other threads can't interfere with the data
+Critical section:
+Race Conditions:
+Critical Sections:
+Thread safety:
+Multiprocessing vs multithreading vs multitasking:
+Intrinsic lock (monitor lock):
+Semaphore (general and programming):
