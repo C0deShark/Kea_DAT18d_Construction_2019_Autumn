@@ -18,13 +18,13 @@ Rules of Big O:
 2. Ignore low-order terms
 
 Constants don't matter
-O(500) ->
-O(2n) ->
-O(15n^2) ->
+O(500) -> O(1) (Constant time)
+O(2n) -> O(n)
+O(15n^2) -> O(n^2)
 
 Smaller terms don't matter
-O(n + 10) ->
-O(1000n + 50) ->
-O(n^2 + 5n + 8) ->
+O(n + 10) -> O(n)
+O(1000n + 50) -> O(n)
+O(n^2 + 5n + 8) -> O(n^2)
 
 https://practice.geeksforgeeks.org/problems/bubble-sort/1
