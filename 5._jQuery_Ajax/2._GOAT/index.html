@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the GOAT site</title>
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Biggest innovator in goat displaying technology</h1>
+
+    <div class="quote">
+        <p>Kanye quote of the moment</p>
+        <p class="quote-paragraph"></p>
+    </div>
+
+    <audio src="./sadtrombone.mp3" autoplay="autoplay"></audio>
+
+
+    <div class="gallery">
+    </div>
+
+<!--    <div class="about">
+        <p>About</p>
+    </div>-->
+
+    <script>
+/*        var person = {
+            name: "Ray Bradbury",
+            age: 48
+        };
+
+        var about = "Hi my name is " + person.name + "and my age is " + person.age + ".";
+        $(".about").append("<p>" + about + "</p>");*/
+
+
+/*        var imageTagStart = "<img src='";
+        var imageTagEnd = "' />";
+
+        for (var i = 0; i < 10; i++) {
+            $(".gallery").append(imageTagStart + "http://placegoat.com/100/100" + imageTagEnd);
+        }*/
+
+        var paragraphTagStart = "<p>";
+        var paragraphTagEnd = "</p>";
+
+        function getKanyeQuote() {
+            $.get("https://api.kanye.rest/", function response(data) {
+                $(".quote-paragraph").empty();
+                $(".quote-paragraph").text(data.quote);
+            });
+        }
+
+        getKanyeQuote();
+
+        setInterval(function timeOut() {
+            getKanyeQuote();
+        }, 8000)
+
+    </script>
+</body>
+</html>
