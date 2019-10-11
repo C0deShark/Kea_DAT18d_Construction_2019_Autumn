@@ -32,4 +32,9 @@ public class GreetingsController {
         }
     }
 
+    @RequestMapping(value= "/body", method = RequestMethod.POST)
+    public String showMeTheBody(@RequestBody String body) {
+        return body;
+    }
+
 }
