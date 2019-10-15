@@ -34,6 +34,23 @@ public class CreamController {
         }
     }
 
+    @RequestMapping(value = "/cream/{id}", method = RequestMethod.PUT)
+    public String putCream(@PathVariable int id, @RequestBody String body) {
+        if (id >= 0 && id < cream.size()) {
+            try {
+                ObjectMapper objectMapper = new ObjectMapper();
+                Cream newCream = objectMapper.readValue(body, Cream.class);
+                cream.set(id, newCream);
+                return "Successfully updated cream, status: 200";
+            } catch (IOException e) {
+                e.printStackTrace();
+                return "I could not parse the body. Did you specify the correct values?";
+            }
+        } else {
+            return "Cream was not updated, out of bounds.";
+        }
+    }
+
     @RequestMapping(value = "/cream/{id}", method = RequestMethod.DELETE)
     public String deleteCream(@PathVariable int id) {
         if (id >= 0 && id < cream.size()) {
