@@ -10,6 +10,8 @@ public class FileController {
 
             objectOutput.writeObject(chair);
 
+            fileOutput.close();
+            objectOutput.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -19,9 +21,15 @@ public class FileController {
 
     public static void readFromFile() {
         try {
+            FileInputStream fileInputStream = new FileInputStream(new File("chair.txt"));
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
+            Chair chair = (Chair) objectInputStream.readObject();
 
-        } catch (FileNotFoundException e) {
+            System.out.println(chair);
+            System.out.println(chair.size);
+
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();

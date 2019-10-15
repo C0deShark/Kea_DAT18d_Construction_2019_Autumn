@@ -3,6 +3,8 @@ public class Main {
 
         FileController.saveToFile(new Chair(342.03, false));
 
+        FileController.readFromFile();
+
 
     }
 }
